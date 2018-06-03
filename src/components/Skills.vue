@@ -1,14 +1,4 @@
 <template>
-<!-- <div class="hello">
-  <div class="holder">
-  <ul>
-    <li v-for="(data,index) in skills" :key='index'> {{index}} .{{data.skill}} </li>
-  </ul>
-   <div v-bind:class="alertObject"></div>
-  <div v-bind:style="{backgroundColor:bgColor,width:bgWidth,height:bgHeight}"></div>
-  </div>
-
-</div> -->
 <div class="container">
    <form @submit.prevent="addSkill">
       <input type="text" placeholder="Enter a skill you have.."  v-model="skill" v-validate="'min:5'" name="skill">
@@ -36,7 +26,7 @@ export default {
   data() {
     return {
       checked: false,
-      skill: '',  // Add this line
+      skill: '',  
       skills: [
           { "skill": "Vue.js" },
           { "skill": "Frontend Developer" }
